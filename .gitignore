@@ -1,0 +1,57 @@
+# Dependency directories
+node_modules/
+
+# Environment variables file
+.env
+
+# Build output
+.next/
+build/
+
+# Log files
+*.log
+
+# IDE files
+.idea/
+.vscode/
+
+# macOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
+
+# Cache and temp files
+.cache/
+.temp/
+
+# Project configuration files
+package-lock.json
+hardhat.config.js
+next.config.js
+postcss.config.js
+tailwind.config.js
+
+# Next.js specific files
+.next/
+.next/cache/
+.next/server/
+.next/static/
+.next/trace
+.next/package.json
+.next/react-loadable-manifest.json
+.next/build-manifest.json
+.next/server/middleware-build-manifest.js
+.next/server/middleware-manifest.json
+.next/server/middleware-react-loadable-manifest.js
+.next/server/next-font-manifest.js
+.next/server/next-font-manifest.json
+.next/server/pages-manifest.json
+.next/server/pages/
+.next/server/vendor-chunks/
+.next/server/webpack-runtime.js
+.next/static/
+.next/static/chunks/
+.next/static/development/
+.next/static/webpack/
+.next/static/webpack/*.json
