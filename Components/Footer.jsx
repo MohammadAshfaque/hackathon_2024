@@ -4,7 +4,7 @@ import Logo from "./Logo";
 const Footer = () => {
     return (
         <div>
-            <Logo />
+            <text />
         </div>
     );
 };
