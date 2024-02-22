@@ -4,6 +4,7 @@ import { ethers } from "ethers";
 
 // Internal Import
 import { CrowdFundingABI, CrowdFundingAddress } from "./contants";
+import { CrowdFundingContext } from './CrowdFunding';
 
 // ----Fetching smart contract
 const fetchContract = (signerOrProvider) =>
@@ -107,3 +108,77 @@ export const CrowdFundingProvider = ({ children }) => {
         return campaignData;
     };
 };
+const getDonations = async (pId) => {
+    const provider = new ethers.providers.JsonRpcProvider();
+    const contract = fetchContract(provider);
+
+    const donations = await contract.getDonations(pId);
+    const numberOfDonations = donations[0].length;
+
+    const parsedDonations =[];
+
+    for (let i= 0; i < numberOfDonations; i++) {
+        parsedDonations.push({
+            donator: donations[0][i],
+            donation: ethers.utils.formatEther(donations[1][i].toString()),
+        });
+    }
+    return parsedDonations;
+};
+
+//--Check If Wallet is Connected
+const checkIfWalletIsConnected = async () => {
+    try {
+        if (!window.ethereum)
+        return setOpenError(true), setError("Install MetaMask");
+
+        const accounts = await window.ethereum.request({
+            method: "eth_accounts",
+        });
+
+        if (accounts.length) {
+            setCurrentAccount(accounts[0]);
+            return true;
+        } else {
+            console.log("No Account Found");
+        }
+    } catch (error) {
+        console.log("Somethingwrong while connecting to wallet");
+    }
+};
+
+useEffect(() => {
+    checkIfWalletIsConnected();
+}, []);
+
+//--connect Wallet Function
+const connectWallet = async () => {
+    try {
+        if (!window.ethereum) return console.log("Install MetaMask");
+
+        const accounts = await window.ethereum.request({
+            method: "eth_requestAccounts",
+        });
+        setCurrentAccount(accounts[0]);
+    } catch (error) {
+        console.log("Error while connecting to wallet");
+    }
+};
+
+return (
+    <CrowdFundingContext.Provider
+    value={{
+        titleData,
+        currentAccount,
+        createCampaign,
+        getCampaigns,
+        getUserCampaigns, 
+        donateCampaign, 
+        getDonations,
+        connectWallet,
+    }}
+>
+    {children}
+</CrowdFundingContext.Provider>
+  );
+
