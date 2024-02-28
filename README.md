@@ -20,5 +20,4 @@ Welcome to our Blockchain Crowdfunding Platform! This project aims to create a d
 - [Ethereum](https://ethereum.org/)
 - [Polygon](https://polygon.technology/)
 
-## Getting Started
 
