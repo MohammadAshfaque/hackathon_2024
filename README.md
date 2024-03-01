@@ -1,23 +1,40 @@
-# Blockchain Crowdfunding Platform
+# Decentralized Funding: Building and Deploying a Blockchain Crowdfunding DApp
 
-Welcome to our Blockchain Crowdfunding Platform! This project aims to create a decentralized crowdfunding platform using blockchain technology. Users can create campaigns for various projects and raise funds from backers worldwide.
+Building and Deploying a Blockchain Supply Chain Management DApp
 
-## Features
+Revolutionize the way projects and ideas are funded with our blockchain crowdfunding DApp. This innovative platform leverages the power of blockchain technology to create a decentralized, transparent, and secure environment for fundraising.
 
-- **Decentralized:** Built on blockchain technology for transparency and security.
-- **Campaign Creation:** Users can create campaigns for their projects.
-- **Fundraising:** Backers can contribute funds to campaigns they support.
-- **Transparent:** All transactions are recorded on the blockchain for transparency.
-- **Ethereum and Polygon Support:** Supports both Ethereum and Polygon (Matic) networks for scalability and cost-effectiveness.
-- **Next.js:** Frontend built with Next.js for server-side rendering and optimal performance.
-- **Tailwind CSS:** Styled with Tailwind CSS for rapid development and easy customization.
-- **Full Stack:** Includes frontend, backend, and smart contracts.
+Our crowdfunding DApp enables project creators to raise capital directly from a global pool of investors without the need for intermediaries. By utilizing smart contracts, the DApp automates the fundraising process, ensuring that funds are released to project creators only when predefined milestones are met, thereby increasing accountability and reducing the risk of fraud.
 
-## Technologies Used
+## Project Overview
 
-- [Next.js](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Ethereum](https://ethereum.org/)
-- [Polygon](https://polygon.technology/)
+![alt text](public\preview.png)
 
+#### NodeJs & NPM Version
 
+```https://nodejs.org/en/download
+  NodeJs: v18.12.1
+  NPM: 8.19.2
+```
+
+#### Test Faucets
+
+Alchemy will provide you with some free test faucets which you can transfer to your wallet address for deploying the contract
+
+```https://www.alchemy.com/faucets
+  Get: Free Test Faucets
+```
+
+#### RemixID
+
+We are using RemixID for deploying the contract and generation of the ABI in the project, but you can use any other tools like Hardhat, etc.
+
+```https://remix-project.org
+  OPEN: RemixID
+```
+
+#### Polygon Mumbai
+
+```https://mumbai.polygonscan.com/
+  OPEN: Polygon Mumbai
+```
