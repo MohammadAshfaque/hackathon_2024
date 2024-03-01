@@ -14,7 +14,7 @@ const Footer = () => {
                     {/* Column for company information */}
                     <div className="">
                         <h6 className="mb-4 items-center justify-center font-semibold uppercase md:justify-start">
-                            Crypto Maniac
+                            Virtual Vigilantes
                         </h6>
                         <p>
                             Here you can use rows and columns to organize your
@@ -69,7 +69,7 @@ const Footer = () => {
                     className="font-semibold"
                     href="https://tailwind-elements.com"
                 >
-                    Crypto Maniac
+                    Virtual Vigilantes
                 </a>
             </div>
         </footer>
