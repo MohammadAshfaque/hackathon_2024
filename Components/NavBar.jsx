@@ -109,7 +109,7 @@ const NavBar = () => {
                                                         href="/"
                                                         aria-label={el}
                                                         title={el}
-                                                        className="font-medium tracking-wide to-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 "
+                                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 "
                                                     >
                                                         {el}
                                                     </a>
